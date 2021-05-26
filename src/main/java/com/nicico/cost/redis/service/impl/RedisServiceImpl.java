@@ -5,6 +5,7 @@ import com.nicico.cost.framework.domain.dto.BaseDTO;
 import com.nicico.cost.framework.enums.exception.ExceptionEnum;
 import com.nicico.cost.framework.packages.redis.view.RedisResVM;
 import com.nicico.cost.framework.service.exception.ApplicationException;
+import com.nicico.cost.framework.service.exception.ServiceException;
 import com.nicico.cost.redis.service.RedisService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -22,7 +23,7 @@ import static com.nicico.cost.framework.service.GeneralResponse.successCustomRes
 public class RedisServiceImpl implements RedisService {
     private final RedisTemplate<String, Object> redisTemplate;
     private final ModelMapper modelMapper;
-    private final ApplicationException applicationException;
+    private final ApplicationException<ServiceException> applicationException;
 
     public BaseDTO<Boolean> setIn(String key, Object o) {
         redisTemplate.opsForValue().set(generateKey(key), o);
