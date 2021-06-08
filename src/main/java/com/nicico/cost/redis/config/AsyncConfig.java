@@ -11,13 +11,13 @@ import java.util.concurrent.Executor;
 @Configuration
 @EnableAsync
 public class AsyncConfig {
-    @Value("${thread.core.poolSize}")
+    @Value("${thread.core.poolSize:2}")
     private Integer corePollSize;
 
-    @Value("${thread.core.max.poolSize}")
+    @Value("${thread.core.max.poolSize:2}")
     private Integer maxPoolSize;
 
-    @Value("${thread.core.query.capacity}")
+    @Value("${thread.core.query.capacity:100}")
     private Integer queryCapacity;
 
     @Bean("treadPoolAsync")
