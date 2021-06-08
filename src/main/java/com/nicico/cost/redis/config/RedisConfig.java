@@ -15,15 +15,20 @@ public class RedisConfig {
     String redisHost;
     @Value("${redis.port}")
     Integer redisPort;
+    @Value("${redis.database}")
+    Integer database;
+    @Value("${redis.password:}")
+    String password;
 
 
     @Bean
     JedisConnectionFactory redisConnectionFactory() {
         JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
         jedisConnectionFactory.setHostName(redisHost);
-        jedisConnectionFactory.setPassword("nicico");
+        if (Boolean.FALSE.equals(password == null))
+            jedisConnectionFactory.setPassword(password);
         jedisConnectionFactory.setPort(redisPort);
-        jedisConnectionFactory.setDatabase(1);
+        jedisConnectionFactory.setDatabase(database);
         return jedisConnectionFactory;
     }
 
