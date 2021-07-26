@@ -8,22 +8,17 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.nicico.cost</groupId>
+    <groupId>com.webold</groupId>
     <artifactId>redis</artifactId>
     <version>1.0.1-Released</version>
     <name>redis</name>
-    <description>redis project for nicico</description>
+    <description>redis project for webold group</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.nicico.cost</groupId>
-            <artifactId>framework</artifactId>
-            <version>1.0.1-Released</version>
-        </dependency>
-        <dependency>
-            <groupId>com.nicico.cost</groupId>
+            <groupId>com.webold</groupId>
             <artifactId>framework</artifactId>
             <version>1.0.1-Released</version>
         </dependency>
