@@ -1,12 +1,12 @@
-package com.nicico.cost.redis.service.impl;
+package com.webold.redis.service.impl;
 
-import com.nicico.cost.framework.config.general.GeneralStatic;
-import com.nicico.cost.framework.domain.dto.BaseDTO;
-import com.nicico.cost.framework.enums.exception.ExceptionEnum;
-import com.nicico.cost.framework.packages.redis.view.RedisResVM;
-import com.nicico.cost.framework.service.exception.ApplicationException;
-import com.nicico.cost.framework.service.exception.ServiceException;
-import com.nicico.cost.redis.service.RedisService;
+import com.webold.framework.config.general.GeneralStatic;
+import com.webold.framework.domain.dto.BaseDTO;
+import com.webold.framework.enums.exception.ExceptionEnum;
+import com.webold.framework.packages.redis.view.RedisResVM;
+import com.webold.framework.service.exception.ApplicationException;
+import com.webold.framework.service.exception.ServiceException;
+import com.webold.redis.service.RedisService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.nicico.cost.framework.service.GeneralResponse.successCustomResponse;
+import static com.webold.framework.service.GeneralResponse.successCustomResponse;
 
 @Component
 @RequiredArgsConstructor
