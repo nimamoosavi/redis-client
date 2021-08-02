@@ -1,4 +1,4 @@
-package com.webold.redis.config;
+package app.ladderproject.redis.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

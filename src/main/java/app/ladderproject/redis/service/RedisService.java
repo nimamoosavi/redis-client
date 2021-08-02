@@ -1,4 +1,4 @@
-package com.webold.redis.service;
+package app.ladderproject.redis.service;
 
 import com.webold.framework.domain.dto.BaseDTO;
 import com.webold.framework.packages.redis.Redis;

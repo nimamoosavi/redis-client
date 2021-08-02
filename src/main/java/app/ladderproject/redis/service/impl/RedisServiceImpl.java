@@ -1,4 +1,4 @@
-package com.webold.redis.service.impl;
+package app.ladderproject.redis.service.impl;
 
 import com.webold.framework.config.general.GeneralStatic;
 import com.webold.framework.domain.dto.BaseDTO;
@@ -6,7 +6,7 @@ import com.webold.framework.enums.exception.ExceptionEnum;
 import com.webold.framework.packages.redis.view.RedisResVM;
 import com.webold.framework.service.exception.ApplicationException;
 import com.webold.framework.service.exception.ServiceException;
-import com.webold.redis.service.RedisService;
+import app.ladderproject.redis.service.RedisService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.redis.core.RedisTemplate;
