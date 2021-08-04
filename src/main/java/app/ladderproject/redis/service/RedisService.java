@@ -1,8 +1,9 @@
 package app.ladderproject.redis.service;
 
-import com.webold.framework.domain.dto.BaseDTO;
-import com.webold.framework.packages.redis.Redis;
-import com.webold.framework.packages.redis.view.RedisResVM;
+
+import app.ladderproject.core.domain.dto.BaseDTO;
+import app.ladderproject.core.packages.redis.Redis;
+import app.ladderproject.core.packages.redis.view.RedisResVM;
 
 import java.util.concurrent.TimeUnit;
 

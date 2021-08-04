@@ -1,11 +1,11 @@
 package app.ladderproject.redis.service.impl;
 
-import com.webold.framework.config.general.GeneralStatic;
-import com.webold.framework.domain.dto.BaseDTO;
-import com.webold.framework.enums.exception.ExceptionEnum;
-import com.webold.framework.packages.redis.view.RedisResVM;
-import com.webold.framework.service.exception.ApplicationException;
-import com.webold.framework.service.exception.ServiceException;
+
+import app.ladderproject.core.config.general.GeneralStatic;
+import app.ladderproject.core.domain.dto.BaseDTO;
+import app.ladderproject.core.packages.redis.view.RedisResVM;
+import app.ladderproject.core.service.exception.ApplicationException;
+import app.ladderproject.core.service.exception.ServiceException;
 import app.ladderproject.redis.service.RedisService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -15,7 +15,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.webold.framework.service.GeneralResponse.successCustomResponse;
+import static app.ladderproject.core.enums.exception.ExceptionEnum.NOTFOUND;
+import static app.ladderproject.core.service.GeneralResponse.successCustomResponse;
+
 
 @Component
 @RequiredArgsConstructor
@@ -77,7 +79,7 @@ public class RedisServiceImpl implements RedisService {
     public BaseDTO<RedisResVM> fetchComplete(String key, Boolean expireAfterFetch) {
         Object o = redisTemplate.opsForValue().get(generateKey(key));
         BaseDTO<Long> baseDTO = getExpireTime(key, TimeUnit.MILLISECONDS).orElseThrow(
-                applicationException.createApplicationException(ExceptionEnum.NOTFOUND)
+                applicationException.createApplicationException(NOTFOUND)
         );
         if (Boolean.TRUE.equals(expireAfterFetch))
             redisTemplate.delete(generateKey(key));
@@ -88,7 +90,7 @@ public class RedisServiceImpl implements RedisService {
     public BaseDTO<Long> getExpireTime(String key, TimeUnit timeUnit) {
         Long expire = redisTemplate.getExpire(generateKey(key), timeUnit);
         return successCustomResponse(expire).orElseThrow(
-                applicationException.createApplicationException(ExceptionEnum.NOTFOUND)
+                applicationException.createApplicationException(NOTFOUND)
         );
     }
 
