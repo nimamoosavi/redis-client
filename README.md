@@ -8,7 +8,7 @@ The library works with Java 8+, ladder Core 1.0.1+
 ## Structure
 this project implement redis command line interface and you can connect to redis server with this project
 
-[[/images/redis.png | "redis Diagram"]]
+[[/wiki/images/redis.png | "redis Diagram"]]
 
 
 ## method
