@@ -6,9 +6,9 @@ The library works with Java 8+, ladder Core 1.0.1+
 ## [Core](https://github.com/nimamoosavi/core/wiki)
 
 ## Structure
-this project implement redis command line interface and you can connect to redis server with this project
+this project implement redis command line interface, and you can connect to redis server with this project
 
-[[/images/redis.png | "redis Diagram"]]
+![redis-client Diagram](https://github.com/nimamoosavi/redis-client/wiki/images/redis.png)
 
 
 ## method
@@ -76,7 +76,7 @@ BaseDTO< RedisResVM > fetchComplete(String key, Boolean expireAfterFetch)
 >
 > if expireAfterFetch set true , the methode delete key after fetch
 
-BaseDTO<Long> getExpireTime(String key, TimeUnit timeUnit)
+BaseDTO<Long> getExpireTime(String key, TimeUnit)
 >key      is the unique key in redis service
 >
 > timeUnit the type of time you want fetch expire time
