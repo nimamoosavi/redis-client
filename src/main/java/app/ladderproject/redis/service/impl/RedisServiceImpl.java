@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
-import static app.ladderproject.core.enums.exception.ExceptionEnum.NOTFOUND;
+import static app.ladderproject.core.enums.exception.Exceptions.NOTFOUND;
 import static app.ladderproject.core.service.GeneralResponse.successCustomResponse;
 
 

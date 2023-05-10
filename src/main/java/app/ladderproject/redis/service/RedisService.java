@@ -16,37 +16,37 @@ import java.util.concurrent.TimeUnit;
 public interface RedisService extends Redis {
     /**
      * @param key is the unique key in redis service
-     * @param o   is object that you want to save in value
-     * @return boolean of result
+     * @param o   is an object that you want to save in value
+     * @return boolean of a result
      */
     BaseDTO<Boolean> setIn(String key, Object o);
 
     /**
      * @param key        is the unique key in redis service
-     * @param o          is object that you want to save in value
+     * @param o          is an object that you want to save in value
      * @param expireTime that is expireTime that the key not value after that
-     * @return boolean of result
+     * @return boolean of a result
      */
 
     BaseDTO<Boolean> setIn(String key, Object o, Long expireTime);
 
     /**
      * @param key is the unique key in redis service
-     * @param o   is object that you want to save in value
-     * @return boolean for result
+     * @param o   is an object that you want to save in value
+     * @return boolean for a result
      */
     BaseDTO<Object> updateIfPresent(String key, Object o);
 
     /**
      * @param key is the unique key in redis service
-     * @param o   is object that you want to save in value
+     * @param o   is an object that you want to save in value
      * @apiNote this methode call async
      */
     void setAsyncIn(String key, Object o);
 
     /**
      * @param key        is the unique key in redis service
-     * @param o          is object that you want to save in value
+     * @param o          is an object that you want to save in value
      * @param expireTime that is expireTime that the key not value after that
      * @apiNote this methode call async
      */
@@ -54,14 +54,14 @@ public interface RedisService extends Redis {
 
     /**
      * @param key is the unique key in redis service
-     * @param o   is object that you want to save in value
+     * @param o   is an object that you want to save in value
      */
 
     void setAsyncInIfPresent(String key, Object o);
 
     /**
      * @param key              is the unique key in redis service
-     * @param expireAfterFetch if true , delete key after fetch
+     * @param expireAfterFetch if true, delete key after fetch
      * @param tClass           the object you want to cast to it
      * @param <R>              the type of class
      */
@@ -70,14 +70,14 @@ public interface RedisService extends Redis {
 
     /**
      * @param key              is the unique key in redis service
-     * @param expireAfterFetch if true , delete key after fetch
+     * @param expireAfterFetch if true, delete key after fetch
      */
     BaseDTO<Object> fetch(String key, Boolean expireAfterFetch);
 
     /**
      * @param key              is the unique key in redis service
-     * @param expireAfterFetch if true , delete key after fetch
-     * @return BaseDTO<RedisResVM> is a view that all data such as header , expire time and etc
+     * @param expireAfterFetch if true, delete key after fetch
+     * @return BaseDTO<RedisResVM> is a view that all data such as header, expire time and etc
      */
 
     BaseDTO<RedisResVM> fetchComplete(String key, Boolean expireAfterFetch);
@@ -91,7 +91,7 @@ public interface RedisService extends Redis {
 
     /**
      * @param key is the unique key in redis service
-     * @return boolean for result
+     * @return boolean for a result
      */
 
     BaseDTO<Boolean> delete(String key);
